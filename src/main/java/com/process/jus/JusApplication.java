@@ -1,20 +1,14 @@
 package com.process.jus;
 
-import com.curso.spring.utils.SenhaUtils;
 import com.mashape.unirest.http.exceptions.UnirestException;
-import com.process.jus.security.entities.Usuario;
-import com.process.jus.security.enums.PerfilEnum;
-import com.process.jus.security.repositories.UsuarioRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class JusApplication {
     
-    @Autowired
-    private UsuarioRepository usuarioRepository;
+//    @Autowired
+//    private UsuarioRepository usuarioRepository;
     
     public static void main(String[] args) throws UnirestException {
         SpringApplication.run(JusApplication.class, args);

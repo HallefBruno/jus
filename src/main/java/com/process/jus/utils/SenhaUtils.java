@@ -1,4 +1,4 @@
-package com.curso.spring.utils;
+package com.process.jus.utils;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
