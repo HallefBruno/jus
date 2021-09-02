@@ -46,6 +46,8 @@ $(function () {
             }).fail(function (jqXHR, textStatus, response) {
                 if(jqXHR.responseJSON.message) {
                     Swal.fire('Atenção',`${jqXHR.responseJSON.message}`,'warning');
+                } else if(jqXHR.responseJSON.status === 401) {
+                    Swal.fire('Atenção',"Acesso negado. Você deve estar autenticado no sistema para acessar a URL solicitada!",'warning');
                 }
                 window.console.log(jqXHR);
             });
