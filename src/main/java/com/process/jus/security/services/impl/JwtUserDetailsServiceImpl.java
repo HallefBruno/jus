@@ -13,16 +13,16 @@ import com.process.jus.security.services.UsuarioService;
 @Service
 public class JwtUserDetailsServiceImpl implements UserDetailsService {
 
-    @Autowired
-    private UsuarioService usuarioService;
+  @Autowired
+  private UsuarioService usuarioService;
 
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Optional<Usuario> funcionario = usuarioService.buscarPorEmail(username);
-        if (funcionario.isPresent()) {
-            return JwtUserFactory.create(funcionario.get());
-        }
-        throw new UsernameNotFoundException("Email não encontrado.");
+  @Override
+  public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    Optional<Usuario> funcionario = usuarioService.buscarPorEmail(username);
+    if (funcionario.isPresent()) {
+      return JwtUserFactory.create(funcionario.get());
     }
+    throw new UsernameNotFoundException("Email não encontrado.");
+  }
 
 }

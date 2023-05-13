@@ -1,4 +1,3 @@
-
 package com.process.jus.utils;
 
 import org.apache.catalina.Context;
@@ -12,13 +11,13 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class CookieProcessor {
 
-    @Bean
-    WebServerFactoryCustomizer<TomcatServletWebServerFactory> cookieProcessorCustomizer() {
-        return (TomcatServletWebServerFactory tomcatServletWebServerFactory) -> {
-            tomcatServletWebServerFactory.addContextCustomizers((TomcatContextCustomizer) (Context context1) -> {
-                context1.setCookieProcessor(new LegacyCookieProcessor());
-            });
-        };
-    }
-    
+  @Bean
+  WebServerFactoryCustomizer<TomcatServletWebServerFactory> cookieProcessorCustomizer() {
+    return (TomcatServletWebServerFactory tomcatServletWebServerFactory) -> {
+      tomcatServletWebServerFactory.addContextCustomizers((TomcatContextCustomizer) (Context context1) -> {
+        context1.setCookieProcessor(new LegacyCookieProcessor());
+      });
+    };
+  }
+
 }

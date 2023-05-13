@@ -1,30 +1,30 @@
-
 package com.process.jus.security.entities;
 
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class Response<T> {
-    
-    private T data;
-    private List<String> erros;
 
-    public T getData() {
-        return data;
-    }
+  private T data;
+  private List<String> erros;
 
-    public void setData(T data) {
-        this.data = data;
-    }
+  public T getData() {
+    return data;
+  }
 
-    public List<String> getErros() {
-        if(erros == null) return new ArrayList<>();
-        return erros;
-    }
+  public void setData(T data) {
+    this.data = data;
+  }
 
-    public void setErros(List<String> erros) {
-        this.erros = erros;
+  public List<String> getErros() {
+    if (erros == null) {
+      return new ArrayList<>();
     }
-    
+    return erros;
+  }
+
+  public void setErros(List<String> erros) {
+    this.erros = erros;
+  }
+
 }

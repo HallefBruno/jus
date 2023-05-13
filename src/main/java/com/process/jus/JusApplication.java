@@ -6,14 +6,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class JusApplication {
-    
+
 //    @Autowired
 //    private UsuarioRepository usuarioRepository;
-    
-    public static void main(String[] args) throws UnirestException {
-        SpringApplication.run(JusApplication.class, args);
-    }
-    
+  public static void main(String[] args) throws UnirestException {
+    SpringApplication.run(JusApplication.class, args);
+  }
+
 //    @Bean
 //    public CommandLineRunner commandLineRunner() {
 //        return args -> {
@@ -32,7 +31,6 @@ public class JusApplication {
 //
 //        };
 //    }
-    
 //    Unirest.setTimeouts(0, 0);
 //        HttpResponse<String> response = Unirest.post("https://kb-authorization-server.herokuapp.com/oauth/token")
 //                .header("Authorization", "Basic bXlhcHBuYW1lMTIzOm15YXBwc2VjcmV0MTIz")
@@ -42,5 +40,4 @@ public class JusApplication {
 //                .field("grant_type", "password")
 //                .asString();
 //        System.out.println(response.getBody());
-
 }

@@ -15,52 +15,52 @@ import javax.persistence.Table;
 @Table(name = "usuario")
 public class Usuario implements Serializable {
 
-    private static final long serialVersionUID = 306411570471828345L;
+  private static final long serialVersionUID = 306411570471828345L;
 
-    private Long id;
-    private String email;
-    private String senha;
-    private PerfilEnum perfil;
+  private Long id;
+  private String email;
+  private String senha;
+  private PerfilEnum perfil;
 
-    public Usuario() {
-    }
+  public Usuario() {
+  }
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    public Long getId() {
-        return id;
-    }
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  public Long getId() {
+    return id;
+  }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+  public void setId(Long id) {
+    this.id = id;
+  }
 
-    @Column(name = "email", nullable = false)
-    public String getEmail() {
-        return email;
-    }
+  @Column(name = "email", nullable = false)
+  public String getEmail() {
+    return email;
+  }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+  public void setEmail(String email) {
+    this.email = email;
+  }
 
-    @Enumerated(EnumType.STRING)
-    @Column(name = "perfil", nullable = false)
-    public PerfilEnum getPerfil() {
-        return perfil;
-    }
+  @Enumerated(EnumType.STRING)
+  @Column(name = "perfil", nullable = false)
+  public PerfilEnum getPerfil() {
+    return perfil;
+  }
 
-    public void setPerfil(PerfilEnum perfil) {
-        this.perfil = perfil;
-    }
+  public void setPerfil(PerfilEnum perfil) {
+    this.perfil = perfil;
+  }
 
-    @Column(name = "senha", nullable = false)
-    public String getSenha() {
-        return senha;
-    }
+  @Column(name = "senha", nullable = false)
+  public String getSenha() {
+    return senha;
+  }
 
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
+  public void setSenha(String senha) {
+    this.senha = senha;
+  }
 
 }

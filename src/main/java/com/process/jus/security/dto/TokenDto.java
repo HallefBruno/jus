@@ -2,21 +2,21 @@ package com.process.jus.security.dto;
 
 public class TokenDto {
 
-    private String token;
+  private String token;
 
-    public TokenDto() {
-    }
+  public TokenDto() {
+  }
 
-    public TokenDto(String token) {
-        this.token = token;
-    }
+  public TokenDto(String token) {
+    this.token = token;
+  }
 
-    public String getToken() {
-        return token;
-    }
+  public String getToken() {
+    return token;
+  }
 
-    public void setToken(String token) {
-        this.token = token;
-    }
+  public void setToken(String token) {
+    this.token = token;
+  }
 
 }
